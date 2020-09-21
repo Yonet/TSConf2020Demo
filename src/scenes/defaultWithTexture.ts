@@ -7,7 +7,6 @@ import { Vector3 } from '@babylonjs/core/Maths/math.vector';
 import { GroundBuilder } from '@babylonjs/core/Meshes/Builders/groundBuilder';
 import { SphereBuilder } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
 import { Scene } from '@babylonjs/core/scene';
-import { WebXRExperienceHelper } from '@babylonjs/core/XR/webXRExperienceHelper';
 
 import grassTextureUrl from '../../assets/grass.jpg';
 import { CreateSceneClass } from '../createScene';
@@ -56,37 +55,17 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
         sphere.position.y = 1;
 
         // Our built-in 'ground' shape.
-        // const ground = GroundBuilder.CreateGround(
-        //     "ground",
-        //     { width: 6, height: 6 },
-        //     scene
-        // );
+        const ground = GroundBuilder.CreateGround(
+            "ground",
+            { width: 6, height: 6 },
+            scene
+        );
 
         // Load a texture to be used as the ground material
-        // const groundMaterial = new StandardMaterial("ground material", scene);
-        // groundMaterial.diffuseTexture = new Texture(grassTextureUrl, scene);
+        const groundMaterial = new StandardMaterial("ground material", scene);
+        groundMaterial.diffuseTexture = new Texture(grassTextureUrl, scene);
 
-        // ground.material = groundMaterial;
-
-        // XR Related
-        // const xrHelper = await WebXRExperienceHelper.CreateAsync(scene);
-        // const xr = navigator.xr;
-        // const mode = await navigator.xr.isSessionSupported("immersive-ar") ? "ar" : "vr";
-        
-        WebXRExperienceHelper.CreateAsync(scene).then((xrHelper: WebXRExperienceHelper) => {
-            console.log("success ", xrHelper);
-            // const mode =  xrHelper.sessionManager.isSessionSupportedAsync('immersive-ar');
-            // console.log("Mode is ", mode);
-            console.log("State is ",xrHelper.state);
-            xrHelper.sessionManager.initializeSessionAsync("immersive-ar");
-            //   enterXRAsync({
-            //     uiOptions: {
-            //         sessionMode: "immersive-ar"
-            //     }
-            // })
-        }, (err)=> {
-            console.log("failed with err: ", err);
-        });
+        ground.material = groundMaterial;
 
         return scene;
     };

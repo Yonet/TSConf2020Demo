@@ -23,13 +23,7 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
         const scene = new Scene(engine);
         console.log("AR scene starting");
 
-        // This creates and positions a free camera (non-mesh)
-        // const camera = new FreeCamera(
-        //     "camera1",
-        //     new Vector3(0, 5, -10),
-        //     scene
-        //   );
-
+        // This creates and positions a free camera (non-mesh) at the center
         const camera = new ArcRotateCamera(
             "my first camera",
             0,
@@ -38,7 +32,8 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
             Vector3.Zero(),
             scene
         );
-        // This targets the camera to scene origin
+
+        // This targets the camera to the sphere.
         camera.setTarget(new Vector3(0, 2, 5));
 
         // This attaches the camera to the canvas

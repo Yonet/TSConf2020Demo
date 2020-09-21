@@ -11,6 +11,7 @@
 * [Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/develop/web/javascript-development-overview?WT.mc_id=spatial-8871-ayyonet)
 * [BabylonJS Playground](https://playground.babylonjs.com)
 * [BabylonJS documentation](https://doc.babylonjs.com)
+* [BabylonJS WebXR Docs](https://doc.babylonjs.com/how_to/introduction_to_webxr)
 
 ## Getting started
 
