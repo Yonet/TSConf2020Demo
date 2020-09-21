@@ -1,7 +1,7 @@
 {
     "name": "babylon-4-hackathon",
     "version": "0.0.1",
-    "description": "A simple scene using Babylon.js, typescript to demo WebXR capabilities",
+    "description": "A simple scene using Babylon.js, typescript and webpack. What could go wrong?",
     "main": "index.ts",
     "dependencies": {
         "@babylonjs/core": "preview",
@@ -13,13 +13,13 @@
         "@typescript-eslint/parser": "^2.30.0",
         "clean-webpack-plugin": "^3.0.0",
         "eslint": "^6.8.0",
-        "file-loader": "^6.1.0",
-        "html-webpack-plugin": "^4.4.1",
+        "file-loader": "^6.0.0",
+        "html-webpack-plugin": "^4.2.0",
         "source-map-loader": "^0.2.4",
         "ts-loader": "^6.2.1",
-        "typescript": "^3.9.7",
+        "typescript": "^3.8.3",
         "url-loader": "^4.1.0",
-        "webpack": "^4.44.2",
+        "webpack": "^4.43.0",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.10.3",
         "webpack-merge": "^4.2.2"
