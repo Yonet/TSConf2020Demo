@@ -42,11 +42,11 @@
     ],
     "author": {
         "name": "Ayşegül Yönet",
-        "url": "https://github.com/Yonet"
+        "url": "https://github.com/Yonet/TSConf2020Demo "
     },
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/Yonet/Babylon4Hackathon/issues"
     },
-    "homepage": "https://github.com/Yonet/Babylon4Hackathon"
+    "homepage": "https://yonet.github.io/TSConf2020Demo/"
 }
