@@ -1,4 +1,5 @@
-import { WebXRPlaneDetector } from '@babylonjs/core';
+/* eslint-disable no-fallthrough */
+import { SceneLoader, WebXRAnchorSystem, WebXRFeaturesManager, WebXRPlaneDetector } from '@babylonjs/core';
 import { ArcRotateCamera } from '@babylonjs/core/Cameras/arcRotateCamera';
 import { Engine } from '@babylonjs/core/Engines/engine';
 import { HemisphericLight } from '@babylonjs/core/Lights/hemisphericLight';
@@ -7,7 +8,7 @@ import { SphereBuilder } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
 import { Scene } from '@babylonjs/core/scene';
 
 import { CreateSceneClass } from '../createScene';
-
+// import dino from ;
 // import { Scene } from "@babylonjs/core/Helpers/sceneHelpers"
 // import * as MATERIALS from "babylonjs-materials";
 // If you don't need the standard material you will still need to import it since the scene requires it.
@@ -56,8 +57,20 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
         sphere.position.y = 2;
         sphere.position.z = 5;
 
+        // const importResult = await SceneLoader.ImportMeshAsync(
+        //     "dinosaur",
+        //     '../../assets/dino/',
+        //     "Mesh_Diplodocus.gltf",
+        //     scene,
+        //     (newMeshes)=> {console.log("Meshes  ", newMeshes)}
+        // );
+        // importResult.meshes[0].scaling.scaleInPlace(10);
+
+        // just scale it so we can see it better
+        // importResult.meshes[0].scaling.scaleInPlace(10);
+
         const xr = await scene.createDefaultXRExperienceAsync({
-            //     // ask for an ar-session
+            // ask for an ar-session
             uiOptions: {
                 sessionMode: "immersive-ar",
                 referenceSpaceType: "local-floor"
@@ -65,11 +78,37 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
             optionalFeatures: true
         });
 
-        const fm = xr.baseExperience.featuresManager;
+        // Basic WebXR Experience. Read more here: https://doc.babylonjs.com/how_to/webxr_experience_helpers#the-basic-experience-helper​
+        // const xr = await WebXRExperienceHelper.CreateAsync(scene);
+        // const sessionManager = await xr.enterXRAsync("immersive-ar", "local-floor" /*, optionalRenderTarget */ );
+
+        // xr.onStateChangedObservable.add((state) => {
+        //     switch (state) {
+        //         case WebXRState.IN_XR:
+        //             // XR is initialized and already submitted one frame
+        //         case WebXRState.ENTERING_XR:
+        //             // xr is being initialized, enter XR request was made
+        //         case WebXRState.EXITING_XR:
+        //             // xr exit request was made. not yet done.
+        //         case WebXRState.NOT_IN_XR:
+        //             // self explanatory - either our or not yet in XR
+        //     }
+        // })
+
+        const features = ["xr-physics-controller", "xr-plane-detection", "xr-hit-test", "xr-anchor-system"];
+       
+        const fm: WebXRFeaturesManager = xr.baseExperience.featuresManager;
+        // features.forEach((val, i) => {fm.enableFeature(val)});
         const xrPlanes = fm.enableFeature(WebXRPlaneDetector.Name, "latest");
+        const xrAnchors = fm.enableFeature(WebXRAnchorSystem.Name, "latest");
+        console.log("fm ", fm)
+        const availableFeatures: string[] = fm.getEnabledFeatures();
+        console.log("available features", availableFeatures);
         const planes = [];
         xr.baseExperience.sessionManager.onXRSessionInit.add((experienceHelper) => {
-            console.log("XR Session init eH", experienceHelper);
+            console.log("XR Session init event Experience helper", experienceHelper);
+            experienceHelper.addEventListener("onselect", (e: any)=> {console.log("event is", e)})
+            console.log("fm ", fm);
         })
         return scene;
     };
