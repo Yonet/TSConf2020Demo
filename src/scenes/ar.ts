@@ -8,7 +8,8 @@ import { SphereBuilder } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
 import { Scene } from '@babylonjs/core/scene';
 
 import { CreateSceneClass } from '../createScene';
-// import dino from ;
+import controllerModel from "../../assets/glb/samsung-controller.glb";
+// import dino from '../../assets/dino/Mesh_Diplodocus.gltf';
 // import { Scene } from "@babylonjs/core/Helpers/sceneHelpers"
 // import * as MATERIALS from "babylonjs-materials";
 // If you don't need the standard material you will still need to import it since the scene requires it.
@@ -56,18 +57,6 @@ export class DefaultSceneWithTexture implements CreateSceneClass {
         // Move the sphere upward 1/2 its height
         sphere.position.y = 2;
         sphere.position.z = 5;
-
-        // const importResult = await SceneLoader.ImportMeshAsync(
-        //     "dinosaur",
-        //     '../../assets/dino/',
-        //     "Mesh_Diplodocus.gltf",
-        //     scene,
-        //     (newMeshes)=> {console.log("Meshes  ", newMeshes)}
-        // );
-        // importResult.meshes[0].scaling.scaleInPlace(10);
-
-        // just scale it so we can see it better
-        // importResult.meshes[0].scaling.scaleInPlace(10);
 
         const xr = await scene.createDefaultXRExperienceAsync({
             // ask for an ar-session
