@@ -42,7 +42,11 @@ To be able to run the demo, you need to sign up for an Azure Cognitive Services 
 - Sign up for a [free account for Azure for a Cognitive Services](https://azure.microsoft.com/free/?WT.mc_id=aiml-8438-ayyonet) Key.
 - Go to [Azure Portal](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=aiml-8438-ayyonet) to create a Computer Vision resource.
 - Click "Create Resource" and search for Computer Vision.
+![Create Resource on Azure Portal](assets/images/createResource.png)
+
 - Once resource is created, on the overview of the resource, find Keys and Endpoints tab.
+
+![Computer Vision Resource Overview](assets/images/resourceOverview.png)
 - Copy and paste your key and endpoint url on the html input and add an image to analyse.
 
 ## Loading different examples
