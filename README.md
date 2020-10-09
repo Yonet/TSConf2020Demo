@@ -5,6 +5,7 @@
 ## Technologies
 
 * [BabylonJS](https://www.babylonjs.com/)
+* [Azure Computer Vision](https://docs.microsoft.com/azure/cognitive-services/computer-vision/?WT.mc_id=aiml-8438-ayyonet)
 * [WebXR](https://docs.microsoft.com/windows/mixed-reality/develop/web/webxr-overview?WT.mc_id=spatial-8871-ayyonet)
 * [TypeScript](https://www.typescriptlang.org/?WT.mc_id=spatial-8871-ayyonet)
 * [BabylonJS-webpack-es6 starter](https://github.com/RaananW/babylonjs-webpack-es6) by [Raanan Weber](https://github.com/RaananW)
@@ -31,6 +32,18 @@ The entry point for the entire TypeScript application is `./src/index.ts` . Any 
 To debug, open the browser's dev tool. Source maps are ready to be used. In case you are using VSCode, simply run the default debugger task ( `Launch Chrome against localhost` ) while making sure `npm start` is still running. This will allow you to debug your application straight in your editor.
 
 [![How to debug WebXR on Chrome Dev Tools Tutorial](http://img.youtube.com/vi/r-wSk24Wmpk/0.jpg)](https://www.youtube.com/watch?v=r-wSk24Wmpk)
+
+### Running Computer Vision Sample
+
+![Computer Vision Samples](assets/images/ComputerVision.png)
+
+To be able to run the demo, you need to sign up for an Azure Cognitive Services Account and add your key and url to the form on [get-printed-text.html](./main/public/get-printed-text.html).
+
+- Sign up for a [free account for Azure for a Cognitive Services](https://azure.microsoft.com/free/?WT.mc_id=aiml-8438-ayyonet) Key.
+- Go to [Azure Portal](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=aiml-8438-ayyonet) to create a Computer Vision resource.
+- Click "Create Resource" and search for Computer Vision.
+- Once resource is created, on the overview of the resource, find Keys and Endpoints tab.
+- Copy and paste your key and endpoint url on the html input and add an image to analyse.
 
 ## Loading different examples
 
