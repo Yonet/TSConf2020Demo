@@ -13,6 +13,7 @@
 * [BabylonJS Playground](https://playground.babylonjs.com)
 * [BabylonJS documentation](https://doc.babylonjs.com)
 * [BabylonJS WebXR Docs](https://doc.babylonjs.com/how_to/introduction_to_webxr)
+* Check out more [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=aiml-8438-ayyonet), for [Sentiment](https://docs.microsoft.com/azure/databricks/scenarios/databricks-sentiment-analysis-cognitive-services?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fcognitive-services%2Ftext-analytics%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json&WT.mc_id=aiml-8438-ayyonet) and [Spatial analysis](https://docs.microsoft.com/legal/cognitive-services/computer-vision/responsible-use-deployment?context=/azure/cognitive-services/Computer-vision/context/context&WT.mc_id=aiml-8438-ayyonet), [Anamoly Detection](https://docs.microsoft.com/azure/cognitive-services/anomaly-detector/?WT.mc_id=aiml-8438-ayyonet) and more.
 
 ## Getting started
 
