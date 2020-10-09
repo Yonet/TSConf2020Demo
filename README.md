@@ -49,6 +49,8 @@ To be able to run the demo, you need to sign up for an Azure Cognitive Services 
 ![Computer Vision Resource Overview](assets/images/resourceOverview.png)
 - Copy and paste your key and endpoint url on the html input and add an image to analyse.
 
+Check out more [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=aiml-8438-ayyonet), for [Sentiment](https://docs.microsoft.com/azure/databricks/scenarios/databricks-sentiment-analysis-cognitive-services?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fcognitive-services%2Ftext-analytics%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json&WT.mc_id=aiml-8438-ayyonet) and [Spatial analysis](https://docs.microsoft.com/legal/cognitive-services/computer-vision/responsible-use-deployment?context=/azure/cognitive-services/Computer-vision/context/context&WT.mc_id=aiml-8438-ayyonet), [Anamoly Detection](https://docs.microsoft.com/azure/cognitive-services/anomaly-detector/?WT.mc_id=aiml-8438-ayyonet) and more.
+
 ## Loading different examples
 
 The `./src/scenes` directory contains a few examples of scenes that can be loaded. To load a specific scene, add a `?scene=FILENAME` to the URL (i.e. to load the ammo physics demo, use `http://localhost:8080/?scene=physicsWithAmmo` ).
