@@ -2,6 +2,8 @@
 
 [WebXR](https://www.w3.org/TR/webxr/) demo app for [TSConf2020](https://tsconf.io/).
 
+[![Getting started with WebXR Augmented Reality using Babylon.js](http://img.youtube.com/vi/RaB_Uyqx6Q4/0.jpg)](https://www.youtube.com/watch?v=RaB_Uyqx6Q4)
+
 ## Technologies
 
 * [BabylonJS](https://www.babylonjs.com/)
