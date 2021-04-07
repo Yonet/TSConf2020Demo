@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  tsconf2020:
+    image: tsconf2020
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

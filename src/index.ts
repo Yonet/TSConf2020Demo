@@ -1,5 +1,6 @@
 import { Engine } from "@babylonjs/core/Engines/engine";
 import { getSceneModuleWithName } from "./createScene";
+import { StandardMaterial } from '@babylonjs/core';
 
 const getModuleToLoad = (): string | undefined => {
     // ATM using location.search
