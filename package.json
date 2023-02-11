@@ -6,7 +6,7 @@
     "dependencies": {
         "@babylonjs/loaders": "^4.2.0",
         "ammo.js": "github:kripken/ammo.js",
-        "gts": "^2.0.2"
+        "gts": "^3.1.1"
     },
     "devDependencies": {
         "@babylonjs/core": "^4.2.0",
